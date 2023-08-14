@@ -6,7 +6,6 @@ echo "PID du script: $$"
 echo "Nombre d'arguments passés au script: $#"
 echo "Tous les arguments passés au script: $@"
 echo "Utilisateur actuel: $USER"
-
 sleep 5;
 
 echo "Entrer votre nom d'utilisateur :";
@@ -17,6 +16,9 @@ if [[ "$nom" == "$USER" ]]; then
     echo "Salut $nom et bienvenue dans ce programme d'entraînement au bash"
     sleep 3;
     echo "Tu es dans le dossier $(pwd)"
+    sleep 3;
+    echo "Affichage de tous les alias" 
+    alias -p
     sleep 3;
 
     echo "UTILISATION DU FOR";
