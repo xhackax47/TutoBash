@@ -18,8 +18,12 @@ if [[ "$nom" == "$USER" ]]; then
     echo "Tu es dans le dossier $(pwd)"
     sleep 3;
     echo "Affichage de tous les alias" 
-    alias -p
     sleep 3;
+    # Redéfinir la commande `ping` comme alias pour n'envoyer que 5 paquets
+    alias ping='ping -c 5'
+    # Échapper l'alias et utiliser la commande avec ce nom à la place
+    \ping 192.168.1.1
+    alias -p
 
     echo "UTILISATION DU FOR";
     array=(un deux trois quatre cinque six);
