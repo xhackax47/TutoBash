@@ -9,7 +9,7 @@ echo "Utilisateur actuel: $USER"
 
 sleep 5;
 
-echo "Quel est votre nom?";
+echo "Entrer votre nom d'utilisateur :";
 read nom;
 
 if [[ "$nom" == "$USER" ]]; then
